@@ -13,22 +13,29 @@ while (fail) {
   {
    let food = await ti.prompt("Survive the diet by answering trivia. what did my mother eat?");
    if (food.toLowerCase() === "fries") 
-{
-   let trewf = await ti.prompt("what did tanya eat?")}
-   if (trewf.toLowerCase()==="slices")
+   //{else}
+   //await ti.output("no")
+   //fail = true}
+   
+    {
+   let tfood = await ti.prompt("what did tanya eat?")
+   if (tfood.toLowerCase()==="slices")
+    
    {
-    ti.output("blah blah blah")
-     } else {
-      await ti.output("no")}
-
-
-
-
-  } else {
+    let dfood = await ti.prompt("what did drew eat")
+     if (dfood.toLocaleLowerCase()==="donuts")
+     {
+     let Ifood =await ti.prompt("what did I eat")
+      if (Ifood.toLocaleLowerCase()==="all")
+      ti.output("YOU WIN!!!!")
+     }else{
+      ti.output("You fail")
+      fail = true
+     }
+   }
+  }
+} else {
     await ti.output("type start dummy") 
     fail = true;
-    
-
-    
   }
 }
